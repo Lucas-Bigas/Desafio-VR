@@ -5,7 +5,7 @@ Dado('Que eu esteja com a URL valida') do
 end
   
 Quando('Enviar uma requisição com CEP válido') do
-
+    
 end
  
 Então('valido o response com as informações do CEP') do
@@ -24,6 +24,6 @@ Quando('Enviar uma requisição com CEP inválido') do
 end
   
 Então('valido o response com a mensagem de erro') do
-  
+    
 end
   

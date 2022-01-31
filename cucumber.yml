@@ -1,2 +1,5 @@
-default: --publish-quiet
+default: --publish-quiet -p html -p json
+
+pretty: --format pretty
 html: --format html --out=results/report.html
+json: --format json --out=results/report.json

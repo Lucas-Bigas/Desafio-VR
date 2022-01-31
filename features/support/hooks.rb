@@ -1,10 +1,10 @@
 After do |scenario|
-    scenario_name = scenario.name.gsub(/[^\w\-]/, " ")
-  
-    if scenario.failed?
-      tira_foto(scenario_name.downcase!, "falhou")
-    else
-      tira_foto(scenario_name.downcase!, "passou")
+  scenario_name = scenario.name.gsub(/[^\w\-]/, " ")
+
+   if scenario.failed?
+        tira_foto(scenario_name.downcase!, "falhou")
+   else
+        tira_foto(scenario_name.downcase!, "passou")
     end
   end
 
@@ -19,4 +19,5 @@ def tira_foto(file_name, resultado)
   def temp_shot
     temp_shot = page.save_screenshot("results/evidencias/#{$data}/temp_shot#{$h_m_s}.png")
     shot = Base64.encode64(File.open(temp_shot, "rb").read)
-  end
+ end
+
